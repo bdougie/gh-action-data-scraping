@@ -1,8 +1,10 @@
-
+name: Scrape test
 on:
-  schedule:
-    - cron:  '0 * * * *' # Every hour. Ref https://crontab.guru/examples.html
-name: Scrape Data
+  issues:
+    types: [labeled, unlabeled]
+#   schedule:
+#     - cron:  '0 * * * *' # Every hour. Ref https://crontab.guru/examples.html
+
 jobs:
   build:
     name: Build
